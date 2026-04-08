@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    tax_id_encrypted TEXT NOT NULL,
+    tax_id_iv VARCHAR(255) NOT NULL,
+    tax_id_tag VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
