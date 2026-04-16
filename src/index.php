@@ -503,6 +503,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         <?php endif; ?>
     </div>
+
+    <div class="card database-section">
+        <h2>Pros & Cons</h2>
+    </div>
 </div>
 </body>
 </html>

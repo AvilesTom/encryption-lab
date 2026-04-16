@@ -23,7 +23,6 @@ try {
 
     //Encrypts the given field
     $encryptedTaxId = encryptField($taxId);
-    $encryptedEmail = encryptField($email);
     //connects to the DB
     $pdo = getDbConnection();
 
@@ -46,7 +45,7 @@ try {
     //Executes the query
     $stmt->execute([
         ':full_name' => $name,
-        ':email' => $encryptedEmail['encrypted'],
+        ':email' => $email,
         ':tax_id_encrypted' => $encryptedTaxId['encrypted'],
         ':tax_id_iv' => $encryptedTaxId['iv'],
         ':tax_id_tag' => $encryptedTaxId['tag'],
